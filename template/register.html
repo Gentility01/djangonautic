@@ -1,0 +1,39 @@
+<h1>register</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+   
+    <fieldset class="form-group">
+        <legend class="border-button mb-4">Join today</legend>
+        {{form.errors}}
+
+    
+    {{form.first_name.label}}
+       {{form.first_name}}<p>
+       
+        {{form.last_name.label}}
+        {{form.last_name}}<p>
+
+        {{form.username.label}}
+       {{form.username}}<p>
+
+        {{form.email.label}}
+        {{form.email}}<p> 
+            
+        {{form.password1.label}} 
+       {{form.password1}}<p> 
+
+        {{form.password2.label}}
+       {{form.password2}}<p>  
+           
+        {{form.phone_number}}<p>  
+
+    </fieldset>
+    <div class="form-group">
+        <button class="btn btn-outline-info" type="submit">Sign up</button>
+    </div>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            already have an account? <a class="ml-2" href="# ">Sign in </a>
+        </small>
+    </div>
+</form>
